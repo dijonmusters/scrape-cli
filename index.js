@@ -1,6 +1,11 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
+// TODO: Move taste scraper to separate file
+// TODO: Implement epicurious scraper
+// TODO: Push to npm
+// TODO: Add flag for creating a markdown file in JMFD format
+
 const scrapeTaste = async (data) => {
   const $ = cheerio.load(data);
   const title = $('h1').text();
